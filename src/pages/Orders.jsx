@@ -118,10 +118,10 @@ const Orders = () => {
                 <ColumnsDirective>
                     <ColumnDirective field='id' headerText='ID' textAlign='Right' width={120} isPrimaryKey={true} />
                     <ColumnDirective field='status' headerText='Статус замовлення' width={120} />
-                    <ColumnDirective field='date' headerText='Дата замовлення' textAlign='Center' width={150} />
-                    <ColumnDirective field='sum' headerText='Сума замовлення' textAlign='Center' width={150} />
-                    <ColumnDirective field='comment' headerText='Комментар' textAlign='Left' width={150} />
-                    <ColumnDirective field='shipping_type' headerText='Тип доставки' textAlign='Center' width={150} />
+                    <ColumnDirective field='date' headerText='Дата замовлення' width={150} />
+                    <ColumnDirective field='sum' headerText='Сума замовлення' width={150} />
+                    <ColumnDirective field='comment' headerText='Комментар' width={150} />
+                    <ColumnDirective field='shipping_type' headerText='Тип доставки' width={150} />
                 </ColumnsDirective>
                 <Inject services={[Resize, Sort, ContextMenu, Filter, Page, ExcelExport, Edit, PdfExport]} />
             </GridComponent>

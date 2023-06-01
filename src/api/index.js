@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const apiurl =  'https://vegit.pythonanywhere.com/';
+const apiurl =  'https://vladislava.pythonanywhere.com/';
 
 // Управління рестораном
 export function getRestaurants() {
@@ -163,4 +163,105 @@ export function updateOrder(id, orderData) {
 
 export function getOrdersByOrderId(id) {
     return axios.get(`${apiurl}orders/${id}`);
+}
+
+//Управління комментарами
+export function getReviews() {
+    return axios.get(`${apiurl}reviews`);
+}
+
+export function addReview(reviewData) {
+    return axios.post(`${apiurl}reviews`, reviewData, {
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
+}
+
+export function deleteReview(id) {
+    return axios.delete(`${apiurl}reviews/${id}`);
+}
+
+export function updateReview(id, reviewData) {
+    return axios.put(`${apiurl}reviews/${id}`, reviewData, {
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
+}
+
+//Управління вакансіями
+export function getVacancies() {
+    return axios.get(`${apiurl}vacancies`);
+}
+
+export function addVacancy(vacancyData) {
+    return axios.post(`${apiurl}vacancies`, vacancyData, {
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
+}
+
+export function deleteVacancy(id) {
+    return axios.delete(`${apiurl}vacancies/${id}`);
+}
+
+export function updateVacancy(id, vacancyData) {
+    return axios.put(`${apiurl}vacancies/${id}`, vacancyData, {
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
+}
+
+//Управління запитами на ваканії
+export function getVacancyRequests() {
+    return axios.get(`${apiurl}vacancyrequest`);
+}
+
+export function addVacancyRequest(vacancyData) {
+    return axios.post(`${apiurl}vacancyrequest`, vacancyData, {
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
+}
+
+export function deleteVacancyRequest(id) {
+    return axios.delete(`${apiurl}vacancyrequest/${id}`);
+}
+
+export function updateVacancyRequest(id, vacancyData) {
+    return axios.put(`${apiurl}vacancyrequest/${id}`, vacancyData, {
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
+}
+ 
+
+//Управління персоналом 
+export function getUsers() {
+    return axios.get(`${apiurl}users`);
+}
+
+export function addUser(vacancyData) {
+    return axios.post(`${apiurl}users`, vacancyData, {
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
+}
+
+export function deleteUser(id) {
+    return axios.delete(`${apiurl}users/${id}`);
+}
+
+export function updateUser(id, vacancyData) {
+    return axios.put(`${apiurl}users/${id}`, vacancyData, {
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
 }

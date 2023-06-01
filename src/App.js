@@ -4,7 +4,7 @@ import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
 import { Navbar, Footer, Sidebar, ThemeSettings } from './components';
-import { Order, Menu, Promotions, Products, Categories, Restaurants, Personal, Ecommerce, Orders, Calendar, Employees, Stacked, Pyramid, Customers, Line, Area, Bar, Pie, Financial, ColorPicker, ColorMapping, Editor, Main } from './pages';
+import { VacancyRequests, Vacancies, Reviews, Order, Menu, Promotions, Products, Categories, Restaurants, Personal, Ecommerce, Orders, Calendar, Employees, Stacked, Pyramid, Customers, Line, Area, Bar, Pie, Financial, ColorPicker, ColorMapping, Editor, Main } from './pages';
 import './App.css';
 
 import { useStateContext } from './contexts/ContextProvider';
@@ -74,15 +74,15 @@ const App = () => {
                 <Route path="/categories" element={<Categories />} />
                 <Route path="/items" element={<Products />} />
                 <Route path="/orders" element={<Orders />} />
-                <Route path="/reviews" element={<Orders />} />
+                <Route path="/reviews" element={<Reviews />} />
                 <Route path="/promotions" element={<Promotions />} />
                 <Route path="/menu/:aID" element={<Menu />} />
                 <Route path='/order/:bID' element={<Order />}/>
                 
                 {/* Управління персоналом */}
                 <Route path="/personal" element={<Personal />} />
-                <Route path="/vacancies" element={<Customers />} />
-                <Route path="/replies" element={<Customers />} />
+                <Route path="/vacancies" element={<Vacancies />} />
+                <Route path="/replies" element={<VacancyRequests />} />
 
               </Routes>
             </div>
